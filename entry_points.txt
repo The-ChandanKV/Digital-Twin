@@ -1,0 +1,5 @@
+[console_scripts]
+codebrain-api = codebrain.api.app:main
+codebrain-collect = codebrain.data_collection.main:main
+codebrain-train = codebrain.model.trainer:main
+

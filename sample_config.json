@@ -1,0 +1,11 @@
+{
+  "base_model": "gpt2",
+  "style_dim": 5,
+  "pattern_dim": 3,
+  "max_length": 32,
+  "batch_size": 1,
+  "num_workers": 0,
+  "learning_rate": 1e-05,
+  "num_epochs": 1,
+  "device": "cpu"
+}

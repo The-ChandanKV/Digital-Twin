@@ -1,0 +1,81 @@
+{
+    "name": "codebrain-digital-twin",
+    "displayName": "CodeBrain Digital Twin",
+    "description": "A digital twin of your coding style and patterns",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:codebrain.generateCode",
+        "onCommand:codebrain.optimizeCode",
+        "onCommand:codebrain.showStatus"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "codebrain.generateCode",
+                "title": "Generate Code"
+            },
+            {
+                "command": "codebrain.optimizeCode",
+                "title": "Optimize Code"
+            },
+            {
+                "command": "codebrain.showStatus",
+                "title": "Show Digital Twin Status"
+            }
+        ],
+        "configuration": {
+            "title": "CodeBrain Digital Twin",
+            "properties": {
+                "codebrain.apiUrl": {
+                    "type": "string",
+                    "default": "http://localhost:8000",
+                    "description": "API URL for the digital twin"
+                },
+                "codebrain.stylePreferences": {
+                    "type": "object",
+                    "default": {
+                        "indentation": 4,
+                        "naming": "snake_case",
+                        "lineLength": 80
+                    },
+                    "description": "Default style preferences"
+                },
+                "codebrain.patternPreferences": {
+                    "type": "object",
+                    "default": {
+                        "errorHandling": true,
+                        "optimization": "high",
+                        "documentation": true
+                    },
+                    "description": "Default pattern preferences"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.2.2",
+        "@types/node": "14.x",
+        "eslint": "^7.27.0",
+        "glob": "^7.1.7",
+        "mocha": "^8.4.0",
+        "typescript": "^4.3.2",
+        "vscode-test": "^1.5.2"
+    },
+    "dependencies": {
+        "axios": "^0.21.1"
+    }
+} 
