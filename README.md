@@ -57,6 +57,4 @@ This project uses:
 - FastAPI for the API interface
 - VS Code extension API for IDE integration
 
-## License
 
-MIT License 
