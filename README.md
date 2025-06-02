@@ -1,1 +1,62 @@
-# Digital-Twin
+# Digital Twin
+
+A sophisticated AI system that creates a digital twin of your coding style and problem-solving patterns.
+
+## Project Structure
+
+```
+codebrain/
+├── data_collection/      # Code for collecting coding activity data
+├── feature_extraction/   # Analysis of coding patterns and style
+├── model/               # ML model training and inference
+├── api/                 # API interface for the digital twin
+├── ide_plugin/          # IDE integration components
+└── utils/              # Shared utilities and helpers
+```
+
+## Features
+
+- Collects coding activity data from various sources (Git, IDE, etc.)
+- Analyzes coding patterns and style preferences
+- Trains a personalized AI model on your coding behavior
+- Provides real-time coding assistance through IDE integration
+- Continuous learning from your coding activities
+
+## Setup
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Configure your data sources in `config.yaml`
+
+3. Start the data collection service:
+```bash
+python -m codebrain.data_collection.main
+```
+
+4. Train your digital twin:
+```bash
+python -m codebrain.model.train
+```
+
+## Configuration
+
+Edit `config.yaml` to customize:
+- Data collection sources
+- Feature extraction parameters
+- Model training settings
+- API endpoints
+
+## Development
+
+This project uses:
+- Python 3.9+
+- PyTorch for ML models
+- FastAPI for the API interface
+- VS Code extension API for IDE integration
+
+## License
+
+MIT License 
